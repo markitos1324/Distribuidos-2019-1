@@ -5,10 +5,12 @@ var bodyParser = require('body-parser');
 var app = express();
 
 const name = "3001";
-var servNext = "3002";
-var currentLeader = name;
+var servList = ["3000", "3001", "3002", "3003"];
+var currentLeader = "3000";
 var weight = 7;
 var canLeader = true;
+var vote = {server: [200, weight, name]};
+
 /*
     lider tecnico
     GOTO
@@ -60,53 +62,56 @@ app.post('/test', function (req, res) {
     }else{
         sendLeaderData = {leader: ["", 0]};
     }
-    axios.post('http://localhost:' + servNext + '/newLeaderOperate', sendLeaderData).then(response => {
-        res.send("OK");
+    for (var i = 0; i < servList.length; i++){
+        axios.post('http://localhost:' + servList[i] + '/newLeaderOperate', sendLeaderData).then(response => {
+
+        }).catch(error => {
+            res.send("Fallo");
+            console.log("error test");
+        });
+    }
+});
+
+app.post('/newLeaderOperate', function(req, res, next) {
+    if (canLeader) {
+        var response = {server: {status: 200, size: weight, name: name}};
+    }else{
+        var response = {server: {status: 500, size: weight, name: name}};
+    }
+    axios.post('http://localhost:' + currentLeader + '/newLeaderFinish', response).then(response => {
+        res.send("ok")
     }).catch(error => {
         res.send("Fallo");
         console.log("error test");
     });
 });
 
-app.post('/newLeaderOperate', function(req, res, next) {
-    console.log("inicio changeLeader: " + currentLeader);
-    var number = (req.body.leader[1] > weight) ? req.body.leader[1] : weight ;
-    var newLeader = (req.body.leader[1] > weight) ? req.body.leader[0] : name;
-    var sendLeaderData;
-    if (canLeader){
-        sendLeaderData = {leader: [newLeader, number]};
-    }else{
-        sendLeaderData = {leader: [req.body.leader[0], req.body.leader[1]]};
-    }
-    console.log("actual leader: " + currentLeader);
-    axios.post('http://localhost:' + servNext + '/newLeaderOperate', sendLeaderData).then(response => {
-        //res.sendFile("ok");
-    }).catch(error => {
-        res.send("Fallo");
-        console.log("error newLeader");
-    });
-});
-
 app.post('/newLeaderFinish', function(req, res, next) {
-    console.log("Finish " + currentLeader);
-    axios.post('http://localhost:' + servNext + '/commentNewLeader', {name: req.body.leader[0]}).then(response => {
-        res.sendFile("ok");
-    }).catch(error => {
-        res.send("Fallo");
-        console.log("error newLeader");
-    });
+    vote.server = req.body.server;
+    var finalleader;
+    var actual = weight;
+    for (let i in vote){
+        if (vote[i].status != 500 ){
+            if (actual > vote[i].size) {
+                currentLeader = vote[i].name;
+            }
+        }
+    }
+    for (var i=0;i<servList.length;i++){
+        axios.post('http://localhost:' + servList[i] + '/commentNewLeader', {name: currentLeader}).then(response => {
+            res.sendFile("ok");
+        }).catch(error => {
+            res.send("Fallo");
+            console.log("error newLeader");
+        });
+    }
 });
 
 app.post('/commentNewLeader', function(req, res, next) {
     currentLeader = req.body.name;
-    console.log("actual leader: " + currentLeader);
-    axios.post('http://localhost:' + servNext + '/commentNewLeader', {name: req.body.name}).then(response => {
-        res.sendFile("ok");
-    }).catch(error => {
-        res.send("Fallo");
-        console.log("error newLeader");
-    });
+    console.log("LIDER: " + currentLeader);
 });
+
 
 app.post('/commentNewLeaderFinish', function(req, res, next) {
     currentLeader = req.body.name;
