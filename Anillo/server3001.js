@@ -6,7 +6,7 @@ var app = express();
 
 const name = "3001";
 var servNext = "3002";
-var currentLeader = name;
+var currentLeader = "3000";
 var weight = 7;
 var canLeader = true;
 /*
@@ -48,7 +48,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/leader', function (req, res) {
-    res.send("El lider Actual es: " + currentLeader);
+    res.send("El lider Actual es: " + servNext);
 });
 
 app.post('/test', function (req, res) {
@@ -115,6 +115,10 @@ app.post('/commentNewLeaderFinish', function(req, res, next) {
 
 app.get('/launchLeader', function(req, res, next) {
     res.send(currentLeader);
+});
+
+app.get('/status', function(req, res, next) {
+    res.send(canLeader);
 });
 
 app.post('/', function(req, res, next) {

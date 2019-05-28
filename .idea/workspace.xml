@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2443c3ee-3248-403a-9e04-9d5611cd3d35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Malla/server3000.js" beforeDir="false" afterPath="$PROJECT_DIR$/Malla/server3000.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Malla/server3001.js" beforeDir="false" afterPath="$PROJECT_DIR$/Malla/server3001.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Malla/server3002.js" beforeDir="false" afterPath="$PROJECT_DIR$/Malla/server3002.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Malla/server3003.js" beforeDir="false" afterPath="$PROJECT_DIR$/Malla/server3003.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anillo/pagina.html" beforeDir="false" afterPath="$PROJECT_DIR$/Anillo/pagina.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anillo/server3000.js" beforeDir="false" afterPath="$PROJECT_DIR$/Anillo/server3000.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anillo/server3001.js" beforeDir="false" afterPath="$PROJECT_DIR$/Anillo/server3001.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anillo/server3002.js" beforeDir="false" afterPath="$PROJECT_DIR$/Anillo/server3002.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anillo/server3003.js" beforeDir="false" afterPath="$PROJECT_DIR$/Anillo/server3003.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,22 +20,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Malla/server3000.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-              <folding>
-                <element signature="e#263#375#0" />
-                <element signature="e#610#769#0" />
-                <element signature="e#810#857#0" />
-                <element signature="e#894#1173#0" />
-                <element signature="e#1216#1273#0" />
-                <element signature="e#2743#2801#0" />
-                <element signature="e#2855#2887#0" />
-                <element signature="e#2930#2980#0" />
-                <element signature="e#3013#3057#0" />
-              </folding>
+            <state relative-caret-position="1496">
+              <caret line="88" column="33" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Anillo/server3000.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Anillo/server3001.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Anillo/server3002.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2057">
+              <caret line="121" column="3" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Anillo/pagina.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Anillo/server3003.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1989">
+              <caret line="117" column="40" selection-start-line="116" selection-end-line="117" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -41,19 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Malla/server3001.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
+            <state relative-caret-position="1819">
               <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-              <folding>
-                <element signature="e#263#375#0" />
-                <element signature="e#610#775#0" />
-                <element signature="e#816#866#0" />
-                <element signature="e#903#1182#0" />
-                <element signature="e#1225#1282#0" />
-                <element signature="e#3328#3386#0" />
-                <element signature="e#3440#3472#0" />
-                <element signature="e#3515#3565#0" />
-                <element signature="e#3598#3644#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -61,19 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Malla/server3002.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
+            <state relative-caret-position="1819">
               <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-              <folding>
-                <element signature="e#263#375#0" />
-                <element signature="e#610#775#0" />
-                <element signature="e#816#866#0" />
-                <element signature="e#903#1182#0" />
-                <element signature="e#1225#1282#0" />
-                <element signature="e#3328#3386#0" />
-                <element signature="e#3440#3472#0" />
-                <element signature="e#3515#3565#0" />
-                <element signature="e#3598#3644#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -81,18 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Malla/server3003.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
+            <state relative-caret-position="1819">
               <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-              <folding>
-                <element signature="e#265#377#0" />
-                <element signature="e#612#777#0" />
-                <element signature="e#818#868#0" />
-                <element signature="e#905#1184#0" />
-                <element signature="e#1227#1284#0" />
-                <element signature="e#3225#3283#0" />
-                <element signature="e#3337#3369#0" />
-                <element signature="e#3412#3462#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -109,10 +113,15 @@
         <option value="$PROJECT_DIR$/Malla/server3001.js" />
         <option value="$PROJECT_DIR$/Malla/server3002.js" />
         <option value="$PROJECT_DIR$/Malla/server3003.js" />
+        <option value="$PROJECT_DIR$/Anillo/server3003.js" />
+        <option value="$PROJECT_DIR$/Anillo/server3002.js" />
+        <option value="$PROJECT_DIR$/Anillo/pagina.html" />
+        <option value="$PROJECT_DIR$/Anillo/server3001.js" />
+        <option value="$PROJECT_DIR$/Anillo/server3000.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="125" />
     <option name="y" value="-13" />
     <option name="width" value="1296" />
@@ -123,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,12 +142,18 @@
             <path>
               <item name="Distribuidos-2019-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="Distribuidos-2019-1" type="462c0819:PsiDirectoryNode" />
+              <item name="Anillo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Distribuidos-2019-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Distribuidos-2019-1" type="462c0819:PsiDirectoryNode" />
               <item name="Malla" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -177,17 +191,20 @@
       <option name="presentableId" value="Default" />
       <updated>1559000874770</updated>
       <workItem from="1559000875868" duration="1323000" />
-      <workItem from="1559006376969" duration="6034000" />
+      <workItem from="1559006376969" duration="6397000" />
+      <workItem from="1559056103835" duration="2407000" />
+      <workItem from="1559058570928" duration="1401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7357000" />
+    <option name="totallyTimeSpent" value="11528000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24925596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -210,74 +227,66 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Malla/server3000.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="33" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Anillo/server3002.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="121" column="3" selection-start-line="121" selection-start-column="3" selection-end-line="121" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Anillo/pagina.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="83" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Anillo/server3003.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1989">
+          <caret line="117" column="40" selection-start-line="116" selection-end-line="117" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Malla/server3001.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
+        <state relative-caret-position="1819">
           <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-          <folding>
-            <element signature="e#263#375#0" />
-            <element signature="e#610#775#0" />
-            <element signature="e#816#866#0" />
-            <element signature="e#903#1182#0" />
-            <element signature="e#1225#1282#0" />
-            <element signature="e#3328#3386#0" />
-            <element signature="e#3440#3472#0" />
-            <element signature="e#3515#3565#0" />
-            <element signature="e#3598#3644#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Malla/server3002.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
+        <state relative-caret-position="1819">
           <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-          <folding>
-            <element signature="e#263#375#0" />
-            <element signature="e#610#775#0" />
-            <element signature="e#816#866#0" />
-            <element signature="e#903#1182#0" />
-            <element signature="e#1225#1282#0" />
-            <element signature="e#3328#3386#0" />
-            <element signature="e#3440#3472#0" />
-            <element signature="e#3515#3565#0" />
-            <element signature="e#3598#3644#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Malla/server3003.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
+        <state relative-caret-position="1819">
           <caret line="107" column="3" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="3" />
-          <folding>
-            <element signature="e#265#377#0" />
-            <element signature="e#612#777#0" />
-            <element signature="e#818#868#0" />
-            <element signature="e#905#1184#0" />
-            <element signature="e#1227#1284#0" />
-            <element signature="e#3225#3283#0" />
-            <element signature="e#3337#3369#0" />
-            <element signature="e#3412#3462#0" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Malla/server3000.js">
+    <entry file="file://$PROJECT_DIR$/Anillo/server3001.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-          <folding>
-            <element signature="e#263#375#0" />
-            <element signature="e#610#769#0" />
-            <element signature="e#810#857#0" />
-            <element signature="e#894#1173#0" />
-            <element signature="e#1216#1273#0" />
-            <element signature="e#2743#2801#0" />
-            <element signature="e#2855#2887#0" />
-            <element signature="e#2930#2980#0" />
-            <element signature="e#3013#3057#0" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Anillo/server3000.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>

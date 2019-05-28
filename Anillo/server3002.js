@@ -6,7 +6,7 @@ var app = express();
 
 const name = "3002";
 var servNext = "3003";
-var currentLeader = name;
+var currentLeader = "3000";
 var weight = 3;
 var canLeader = true;
 /*
@@ -115,6 +115,10 @@ app.post('/commentNewLeaderFinish', function(req, res, next) {
 
 app.get('/launchLeader', function(req, res, next) {
     res.send(currentLeader);
+});
+
+app.get('/status', function(req, res, next) {
+    res.send(canLeader);
 });
 
 app.post('/', function(req, res, next) {

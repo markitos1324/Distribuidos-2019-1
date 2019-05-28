@@ -6,7 +6,7 @@ var app = express();
 
 const name = "3003";
 var servNext = "3000";
-var currentLeader = name;
+var currentLeader = "3000";
 var weight = 4;
 var canLeader = true;
 /*
@@ -118,6 +118,10 @@ app.get('/launchLeader', function(req, res, next) {
 app.post('/', function(req, res, next) {
     console.log(req.body);
     res.send("ok");
+});
+
+app.get('/status', function(req, res, next) {
+    res.send(canLeader);
 });
 
 app.listen(name, function () {

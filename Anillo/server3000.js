@@ -47,10 +47,6 @@ app.get('/', function (req, res) {
     */
 });
 
-app.get('/leader', function (req, res) {
-    res.send("El lider Actual es: " + currentLeader);
-});
-
 app.post('/test', function (req, res) {
     console.log("inicio" + currentLeader);
     canLeader = false;
@@ -116,6 +112,10 @@ app.post('/commentNewLeaderFinish', function(req, res, next) {
 
 app.get('/launchLeader', function(req, res, next) {
     res.send(currentLeader);
+});
+
+app.get('/status', function(req, res, next) {
+    res.send(canLeader);
 });
 
 app.post('/', function(req, res, next) {
