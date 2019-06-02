@@ -1,0 +1,20 @@
+.myBorder{
+	border-color: black;
+	border:solid;
+	border-width: 3px;
+}
+.status{
+	width: 30%;
+	margin: 15px 35% 10px 35%;
+	background-color: #97FFDE;
+}
+table,th, td{
+	border:solid black 2px;
+	border-collapse: collapse;
+}
+td, th{
+	padding: 2px 5px 2px 3px; 
+}
+td{
+	text-align: center;
+}
