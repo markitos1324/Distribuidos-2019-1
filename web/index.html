@@ -10,7 +10,7 @@
 </head>
 <body ng-controller="ctrl">
 <div class="myBorder centerthis" style="width:100%; height: 25%; margin-top: 0px;">
-	<p style="font-size: 100px; margin: 0px 0px 0px 0px">hola {{nombre}} {{servPort}}</p>
+	<p style="font-size: 100px; margin: 0px 0px 0px 0px">Hola {{nombre}}//{{ipaddress}}:{{servPort}} </p>
 </div>
 <div class="myBorder status">
 	<label>Yo soy: {{port}}</label>
@@ -24,9 +24,14 @@
 	<button type="button" ng-click="consultLeader()" style="margin-left:24%; margin-right: 0px;">¿Quien es el lider?</button>
 </div>
 <hr>
+<label>IP: {{ipaddress}} <br> </label>
+<input id="myPortID" type="text" ng-change="updateIp()" ng-model="ipaddress" required
+       minlength="4" maxlength="16" size="16" >
+<br>
 <label>Puerto: {{servPort}} <br> </label>
 <input id="myPortID" type="text" ng-change="updatePort()" ng-model="servPort" required
        minlength="4" maxlength="4" size="3" >
+
 <script src="./js/controller.js"></script>
 </body>
 </html>
