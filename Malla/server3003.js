@@ -38,38 +38,11 @@ app.get('/hola', function (req, res) {
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/pagina.html'));
-    /*
-    axios.post('http://localhost:3001/lounchLeader', {leader: name}).then(response => {
-        res.sendFile("OK");
-    }).catch(error => {
-        res.send("Fallo");
-        console.log("error");
-    });
-    */
 });
-
-app.get('/leader', function (req, res) {
-    res.send("El lider Actual es: " + currentLeader);
-});
-
 
 app.post('/test', function (req, res) {
     console.log("inicio" + currentLeader);
     canLeader = false;
-    var sendLeaderData;
-    if (canLeader){
-        sendLeaderData = {leader: [name, weight]};
-    }else{
-        sendLeaderData = {leader: ["", 0]};
-    }
-    for (var i = 0; i < servList.length; i++){
-        axios.post('http://localhost:' + servList[i] + '/newLeaderOperate', sendLeaderData).then(response => {
-
-        }).catch(error => {
-            res.send("Fallo");
-            console.log("error test");
-        });
-    }
 });
 
 app.post('/newLeaderOperate', function(req, res, next) {
@@ -78,6 +51,7 @@ app.post('/newLeaderOperate', function(req, res, next) {
     }else{
         var response = {server: {status: 500, size: weight, name: name}};
     }
+    console.log("Enviando Respuesta: status" + response.server.status + " nombre" + response.server.name);
     axios.post('http://localhost:' + currentLeader + '/newLeaderFinish', response).then(response => {
         res.send("ok")
     }).catch(error => {
@@ -98,6 +72,7 @@ app.post('/newLeaderFinish', function(req, res, next) {
         }
     }
     for (var i=0;i<servList.length;i++){
+        console.log("Enviando nuevo lider: " + servList[i]);
         axios.post('http://localhost:' + servList[i] + '/commentNewLeader', {name: currentLeader}).then(response => {
             res.sendFile("ok");
         }).catch(error => {
@@ -122,11 +97,53 @@ app.get('/launchLeader', function(req, res, next) {
     res.send(currentLeader);
 });
 
-app.post('/', function(req, res, next) {
-    console.log(req.body);
-    res.send("ok");
+app.post('/canLeader', function(req, res, next) {
+    console.log("enviando si puedo ser leader");
+    axios.post('http://localhost:' + currentLeader + '/resCanLeader', {name: currentLeader}).then(response => {
+        res.sendFile("ok");
+    }).catch(error => {
+        res.send("Fallo");
+        console.log("error newLeader");
+    });
+    res.send(canLeader);
 });
 
+app.post('/resCanLeader', function(req, res, next) {
+    currentLeader = req.body.name;
+    if (!currentLeader){
+        var sendLeaderData;
+        if (canLeader){
+            sendLeaderData = {leader: [name, weight]};
+        }else{
+            sendLeaderData = {leader: ["", 0]};
+        }
+        console.log("Comenzando Proceso...");
+        for (var i = 0; i < servList.length; i++){
+            axios.post('http://localhost:' + servList[i] + '/newLeaderOperate', sendLeaderData).then(response => {
+
+            }).catch(error => {
+                res.send("Fallo");
+                console.log("error test");
+            });
+        }
+    }
+    res.send("ok");
+});
+/*
+function contador() {
+    console.log("hola");
+    if (currentLeader != name) {
+        axios.post('http://localhost:' + currentLeader + '/canLeader', {name: name}).then(response => {
+            res.sendFile("ok");
+        }).catch(error => {
+            res.send("Fallo");
+            console.log("error newLeader");
+        });
+    }
+}
+*/
 app.listen(name, function () {
     console.log('Server on port ' + name);
+
+    //setTimeout(contador,1000);
 });
