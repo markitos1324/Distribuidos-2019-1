@@ -1,49 +1,32 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import {Platform, StyleSheet, Text, View,Button,Image} from 'react-native';
+import Toast from 'react-native-simple-toast';
+import ProfileImage from './src/sections/components/profileImage.js';
+import TextContent from './src/sections/containers/textContent.js';
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <ProfileImage/>
+      <TextContent title = {'Titulo de la queja'}/>
+      <TextContent title = {'Descripción'}/>
+      <Button onPress={() => this.saidHello("Holiii")}  title="Hello world"  color="#b473b4"  accessibilityLabel="Learn more about this purple button"/>
+
       </View>
     );
+  }
+  saidHello(param)
+  {
+    Toast.show("Hola mundo feliz!!! " + param);
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
