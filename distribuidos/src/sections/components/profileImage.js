@@ -17,8 +17,10 @@ function ProfileImage(props) {
 
 const styles = StyleSheet.create({
   container : {
-    height: "35%",
-    width: "45%",
+    flex:1,
+    height: 150,
+    width: 280,
+    alignSelf:'center',
     justifyContent: 'center',
     alignItems: 'center',
     margin:5
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
   pfStyle:{
     height: "100%",
     width: "100%",
+    resizeMode:'stretch'
   }
 })
 

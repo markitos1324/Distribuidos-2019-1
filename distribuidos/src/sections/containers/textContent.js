@@ -33,14 +33,14 @@ class TextContent extends Component {
 const styles = StyleSheet.create({
   container : {
     backgroundColor: 'green',
-    height: "7%",
+    height: 40,
     width: "90%",
-    margin:5
+    margin:15
   },
   tiStyle:{
     height: 40,
-    borderColor: 'gray',
-    borderWidth: 1
+    borderColor: '#00ff4f',
+    borderWidth: 3
   }
 });
 
