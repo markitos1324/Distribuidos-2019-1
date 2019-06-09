@@ -12,7 +12,7 @@ class TextContent extends Component {
 
   constructor(props) {
   super(props);
-  this.state = { text: this.props.title };
+  this.state = { textHold: this.props.title,text:'' };
 }
 
   render(){
@@ -21,7 +21,7 @@ class TextContent extends Component {
         <TextInput
         style={styles.tiStyle}
           onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
+          placeholder={this.state.textHold}
         />
       </View>
     );
@@ -32,14 +32,14 @@ class TextContent extends Component {
 
 const styles = StyleSheet.create({
   container : {
-    backgroundColor: 'green',
+    backgroundColor: '#c6c0c0',
     height: 40,
     width: "90%",
     margin:15
   },
   tiStyle:{
     height: 40,
-    borderColor: '#00ff4f',
+    borderColor: '#a3a1a1',
     borderWidth: 3
   }
 });

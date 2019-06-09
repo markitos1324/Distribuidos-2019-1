@@ -10,7 +10,7 @@ import {
 function ProfileImage(props) {
   return(
     <View style={styles.container}>
-      <Image style={styles.pfStyle} source={require('../../../assets/profile.jpg')} />
+      <Image style={styles.pfStyle} source={{uri:props.img}} />
     </View>
   )
 }
