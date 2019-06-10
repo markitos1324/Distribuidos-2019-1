@@ -40,6 +40,7 @@ app.use(function(req, res, next) {
 */
 
 app.post('/', upload.any(), function(req, res, next) {
+    console.log("llega");
     if (req.files) {
         req.files.forEach(function (file) {
 
@@ -58,6 +59,7 @@ app.post('/', upload.any(), function(req, res, next) {
                     if (err){
 
                     }
+                    console.log("termina...");
                     res.json(result);
                 });
             })
