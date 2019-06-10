@@ -13,15 +13,6 @@ export default class App extends Component<Props> {
     contentR: '',
   };
 
-
-choosePhoto = () =>{
-  const options={noData:true};
-  ImagePicker.launchImageLibrary(options, (response) => {
-    if(response.uri){
-      this.setState({photo:response});
-    }
-  });
-}
   render() {
     const {photo} = this.state;
     return (
@@ -45,6 +36,14 @@ choosePhoto = () =>{
     );
   }
 
+  choosePhoto = () =>{
+    const options={noData:true};
+    ImagePicker.launchImageLibrary(options, (response) => {
+      if(response.uri){
+        this.setState({photo:response});
+      }
+    });
+  }
 
   saidHello(param)
   {

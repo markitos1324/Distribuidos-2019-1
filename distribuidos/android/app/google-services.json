@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1039416853494",
+    "firebase_url": "https://distribuidos-efc00.firebaseio.com",
+    "project_id": "distribuidos-efc00",
+    "storage_bucket": "distribuidos-efc00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039416853494:android:af6f0a22a6930367",
+        "android_client_info": {
+          "package_name": "com.distribuidos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039416853494-ph5o9ebb867ukm9qenjkqfc9fl7ogbmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4tVTOBze525Wcp7Y3G-bPgA_qScV_C2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039416853494-ph5o9ebb867ukm9qenjkqfc9fl7ogbmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
