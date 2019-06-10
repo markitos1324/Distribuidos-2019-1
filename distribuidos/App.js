@@ -17,12 +17,15 @@ export default class App extends Component<Props> {
     const {photo} = this.state;
     return (
       <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.titleText}>
+          Sistema de Peticiones, quejas, reclamos, sugerencias y denuncias
+        </Text>
       {
         photo &&(<ProfileImage img = {this.state.photo.uri}/>)
       }
 
         <TouchableOpacity style={styles.myTouchable} onPress={this.choosePhoto}>
-          <Text>Selecionar foto</Text>
+          <Text>Foto</Text>
         </TouchableOpacity>
         <TextContent title = {'Titulo de la queja'}/>
         <TextContent title = {'Descripción'}/>
@@ -63,5 +66,10 @@ const styles = StyleSheet.create({
     width:90,
     marginBottom:10,
     alignItems:'center'
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    margin:15
   }
 });
