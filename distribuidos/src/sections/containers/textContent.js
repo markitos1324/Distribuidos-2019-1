@@ -12,7 +12,7 @@ class TextContent extends Component {
 
   constructor(props) {
   super(props);
-  this.state = { textHold: this.props.title,text:'',props.content:'' };
+  this.state = { textHold: this.props.title,text:'',text:props.content };
 }
 
   render(){

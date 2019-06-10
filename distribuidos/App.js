@@ -27,8 +27,18 @@ export default class App extends Component<Props> {
         <TouchableOpacity style={styles.myTouchable} onPress={this.choosePhoto}>
           <Text>Foto</Text>
         </TouchableOpacity>
-        <TextContent title = {'Titulo de la queja'} content ={this.state.tittleR}/>
-        <TextContent title = {'Descripción'} content ={this.state.contentR}/>
+
+        <TextInput
+        style={styles.tiStyle}
+          onChangeText={(tittleR) => this.setState({tittleR})}
+          placeholder={'Titulo'}
+          />
+
+        <TextInput
+        style={styles.tiStyle}
+          onChangeText={(contentR) => this.setState({contentR})}
+          placeholder={'Descripción'}
+          />
 
         <TouchableOpacity style={styles.myTouchable} onPress={() => this.saidHello()}>
           <Text>ENVIAR!!</Text>
@@ -71,5 +81,16 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     margin:15
+  },
+  tiContainer : {
+    backgroundColor: '#c6c0c0',
+    height: 40,
+    width: "90%",
+    margin:15
+  },
+  tiStyle:{
+    height: 40,
+    borderColor: '#a3a1a1',
+    borderWidth: 3
   }
 });
