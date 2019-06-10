@@ -91,12 +91,13 @@ const Storage = multer.diskStorage({
 })
 
 
-app.post('/api/upload', upload.array('photo', 3), (req, res) => {
+app.post('/foto', upload.array('photo', 3), (req, res) => {
     console.log('file', req.files)
     console.log('body', req.body)
     res.status(200).json({
         message: 'success!',
     })
+    console.log("termina");
 })
 
 app.listen(3000, function () {
