@@ -17,7 +17,7 @@ var newsSchema = new Schema({
     image: String
 });
 
-var News = mongoose.model('News', newsSchema);
+var News = mongoose.model('news', newsSchema);
 
 // support parsing of application/json type post data
 app.use(bodyParser.json());
@@ -54,7 +54,7 @@ app.post('/', upload.any(), function(req, res, next) {
                     image: filename
                 });
 
-                model.save(function (err, result) {
+                news.save(function (err, result) {
                     if (err){
 
                     }
