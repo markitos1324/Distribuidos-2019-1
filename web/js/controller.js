@@ -4,8 +4,28 @@ app.controller("ctrl", function ($scope, $http) {
   $scope.director = "";
   $scope.howiam ="";
   $scope.leave = false;
+  $scope.hide = false;
   $scope.servPort = "";
   $scope.ipaddress = "10.4.74.169";
+  $scope.news ={};
+
+$scope.submit = function() {
+  var formData = new FormData;
+    for(i in $scope.news){
+      formData.append(i, $scope.news[i]);
+    }
+    var file = $('#file')[0].files[0];
+    formData.append('image', file);
+
+    $http.post("http://"+$scope.ipaddress+":"+$scope.servPort, formData,{
+      transformRequest: angular.identity,
+      headers: {
+        'Content-Type': undefined
+      }
+    }).then(function (res) {
+      
+    });
+ }
 
 
 $scope.canILeave = function() {
@@ -43,5 +63,22 @@ $scope.canILeave = function() {
     $scope.updateIp = function() {
       console.log('Puerto actualizado ' + $scope.ipaddress);
     };
+
+    $scope.readURL =function (input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
 
 });

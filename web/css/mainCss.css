@@ -5,6 +5,7 @@ body{
 	border-color: #5C5959;
 	border:solid;
 	border-width: 3px;
+	margin:15px;
 }
 .status{
 	width: 30%;
