@@ -3,21 +3,21 @@ var axios = require('axios');
 var path = require('path');
 var multer = require('multer');
 var fs = require('fs');
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Distribuidos');
 var upload = multer({dest: 'uploads/'});
 var bodyParser = require('body-parser');
 var app = express();
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/Distribuidos');
 
-var News = mongoose.model('News', {
-    title: {
-        type: String
-    },
-    description: {
-        type: String
-    },
+var Schema = mongoose.Schema;
+
+var newsSchema = new Schema({
+    title: String,
+    description: String,
     image: String
 });
+
+var News = mongoose.model('News', newsSchema);
 
 // support parsing of application/json type post data
 app.use(bodyParser.json());
