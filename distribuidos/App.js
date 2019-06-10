@@ -27,10 +27,10 @@ export default class App extends Component<Props> {
         <TouchableOpacity style={styles.myTouchable} onPress={this.choosePhoto}>
           <Text>Foto</Text>
         </TouchableOpacity>
-        <TextContent title = {'Titulo de la queja'}/>
-        <TextContent title = {'Descripción'}/>
+        <TextContent title = {'Titulo de la queja'} content ={this.state.tittleR}/>
+        <TextContent title = {'Descripción'} content ={this.state.contentR}/>
 
-        <TouchableOpacity style={styles.myTouchable} onPress={() => this.saidHello("Holiii")}>
+        <TouchableOpacity style={styles.myTouchable} onPress={() => this.saidHello()}>
           <Text>ENVIAR!!</Text>
         </TouchableOpacity>
 
@@ -50,7 +50,7 @@ export default class App extends Component<Props> {
 
   saidHello(param)
   {
-    Toast.show("Hola mundo feliz!!! " + param);
+    Toast.show(this.state.tittleR + " \n" + this.state.contentR);
   }
 }
 
