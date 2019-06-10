@@ -9,6 +9,16 @@ var upload = multer({dest: 'uploads/'});
 var bodyParser = require('body-parser');
 var app = express();
 
+var News = mongoose.model('News', {
+    title: {
+        type: String
+    },
+    description: {
+        type: String
+    },
+    image: String
+});
+
 // support parsing of application/json type post data
 app.use(bodyParser.json());
 
@@ -32,12 +42,24 @@ app.use(function(req, res, next) {
 app.post('/', upload.any(), function(req, res, next) {
     if (req.files) {
         req.files.forEach(function (file) {
-            console.log(file);
 
             var filename = (new Date).valueOf() + "-" + file.originalname;
             fs.rename(file.path, 'imagenes/' + filename, function (err) {
                 if (err) throw err;
-                console.log("file uploaded...");
+                //save
+
+                var news = new News({
+                    title: req.body.title,
+                    description: req.body.description,
+                    image: filename
+                });
+
+                model.save(function (err, result) {
+                    if (err){
+
+                    }
+                    res.json(result);
+                });
             })
         });
     }
