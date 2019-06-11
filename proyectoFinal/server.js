@@ -72,7 +72,7 @@ app.get('/hola', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/pagina.html'));
+    res.sendFile(path.join(__dirname + '/web/index.html'));
 });
 
 app.post('/', function(req, res, next) {
