@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,Button,Image, ScrollView, TouchableOpacity } from 'react-native';
+import {Platform, StyleSheet, Text, View,Button,Image, ScrollView, TouchableOpacity, TextInput } from 'react-native';
 import Toast from 'react-native-simple-toast';
 import ImagePicker from 'react-native-image-picker';
 import ProfileImage from './src/sections/components/profileImage.js';
@@ -11,6 +11,7 @@ export default class App extends Component<Props> {
     photo:null,
     tittleR: '',
     contentR: '',
+    ipPort: '192.168.0.33:3000'
   };
 
   render() {
@@ -27,20 +28,16 @@ export default class App extends Component<Props> {
         <TouchableOpacity style={styles.myTouchable} onPress={this.choosePhoto}>
           <Text>Foto</Text>
         </TouchableOpacity>
-
-        <TextInput
-        style={styles.tiStyle}
-          onChangeText={(tittleR) => this.setState({tittleR})}
-          placeholder={'Titulo'}
-          />
-
-        <TextInput
-        style={styles.tiStyle}
-          onChangeText={(contentR) => this.setState({contentR})}
-          placeholder={'Descripción'}
-          />
-
-        <TouchableOpacity style={styles.myTouchable} onPress={() => this.saidHello()}>
+        <View style={styles.tiContainer}>
+        <TextInput style={styles.tiStyle} onChangeText={(tittleR) => this.setState({tittleR})} placeholder='Titulo'/>
+        </View>
+        <View style={styles.tiContainer}>
+        <TextInput style={styles.tiStyle} onChangeText={(contentR) => this.setState({contentR})} placeholder='Descripción'/>
+        </View>
+        <View style={styles.tiContainer}>
+        <TextInput style={styles.tiStyle} onChangeText={(ipPort) => this.setState({ipPort})} placeholder='ip y puerto'/>
+        </View>
+        <TouchableOpacity style={styles.myTouchable} onPress={this.handleUploadPhoto}>
           <Text>ENVIAR!!</Text>
         </TouchableOpacity>
 
@@ -58,11 +55,43 @@ export default class App extends Component<Props> {
     });
   }
 
-  saidHello(param)
+  saidHello()
   {
     Toast.show(this.state.tittleR + " \n" + this.state.contentR);
   }
+
+  handleUploadPhoto = () => {
+
+    fetch("http://"+this.state.ipPort+"/foto", {
+      method: "POST",
+      body: this.createFormData(this.state.photo, { userId: "123" })
+    }).then(res => res.json()).then(res => {
+        this.setState({ photo: null });
+      }).catch(error => {
+        alert(this.state.ipPort + " Upload failed!: " + error);
+      });
+  };
+
+  createFormData = (photo, body) => {
+
+    const data = new FormData();
+
+    data.append("photo", {
+      name: photo.fileName,
+      type: photo.type,
+      uri:
+        Platform.OS === "android" ? photo.uri : photo.uri.replace("file://", "")
+    });
+
+    Object.keys(body).forEach(key => {
+      data.append(key, body[key]);
+    });
+
+    return data;
+  };
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
