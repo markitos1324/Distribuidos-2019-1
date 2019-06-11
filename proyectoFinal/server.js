@@ -71,7 +71,7 @@ app.get('/hola', function (req, res) {
 	res.send("Hola Mundo Mensaje o algo asi");
 });
 
-app.get('/', function (req, res) {
+app.get('/pag', function (req, res) {
     res.sendFile(path.join(__dirname + '/web/index.html'));
 });
 
