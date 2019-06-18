@@ -24,6 +24,7 @@ $scope.submit = function() {
       }
     }).then(function (res) {
       
+        $scope.news = res.data;
     });
  }
 
